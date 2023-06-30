@@ -121,7 +121,7 @@ Intermediate MPI instructions (enables a few packages, explicit compilers)
   make -j<n> install
 
 
-Simple non-MPI instructions (enables a few packages, implicit compilers) that I used
+Simple non-MPI instructions (enables a few packages, implicit compilers) for Apple M2 chip (arm64 architecture)
 -----------------------------------------------
 
 ::
@@ -140,10 +140,10 @@ Simple non-MPI instructions (enables a few packages, implicit compilers) that I 
   -Dtrilinos_ENABLE_Teuchos=ON \
   -Dtrilinos_ENABLE_Triutils=ON \
   -DTrilinos_ENABLE_FLOAT=ON \
-  -DCMAKE_INSTALL_PREFIX=/Home/Venus/Folders/NetBeans_Project/MyProject/lib/trilinos-14-3 \
-  -DTrilinos_TRIBITS_DIR:STRING=/Home/Venus/Folders/Trilinos-master/TriBITS/tribits \
+  -DCMAKE_INSTALL_PREFIX=/Home/Venus/Folders/NetBeans_Project/MyProject/lib/trilinos \
+  -DTrilinos_TRIBITS_DIR:STRING=/Home/Venus/Folders/Trilinos-source-13.0.0/TriBITS/tribits \
   -DTrilinos_TRIBITS_PACKAGE_USE_TRIBITS_DIR=TRUE \
-  /Home/Venus/Folders/Trilinos-master
+  /Home/Venus/Folders/Trilinos-source-13.0.0
   
   make install
 
