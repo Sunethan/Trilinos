@@ -45,9 +45,9 @@ Download
 
 2. Copy the folder TriBITS to the trilinos folder.
 
-3. Create a subfolder where you want to build trilinos. For example, <path to trilinos unpacked folder>/MyTrilinos
+3. Create a subfolder where you want to build trilinos. For example, <path to trilinos unpacked folder>/build
 
-4. Go to <path to trilinos unpacked folder>/MyTrilinos and execute the command cmake listed below.
+4. Go to the build folder and execute the command cmake listed below.
 
 Simple MPI instructions (enables most packages)
 -----------------------------------------------
@@ -129,13 +129,20 @@ Simple non-MPI instructions (enables a few packages, implicit compilers) that I 
   cmake \
   -DTPL_ENABLE_MPI=OFF \
   -DBUILD_SHARED_LIBS=ON \
+  -DTrilinos_ENABLE_AztecOO=ON \
   -DTrilinos_ENABLE_Epetra=ON \
   -DTrilinos_ENABLE_EpetraExt=ON \
-  -DTrilinos_ENABLE_AztecOO=ON \
-  -DCMAKE_INSTALL_PREFIX=<path to install Trilinos into> \
-  -DTrilinos_TRIBITS_DIR:STRING=TriBITS/tribits
+  -Dtrilinos_ENABLE_Gtest=ON \
+  -Dtrilinos_ENABLE_Kokkos=ON \
+  -Dtrilinos_ENABLE_Teuchos=ON \
+  -Dtrilinos_ENABLE_Triutils=ON \
+  -DTrilinos_ENABLE_FLOAT=ON \
+  -DTrilinos_ENABLE_COMPLEX=ON \
+  -DCMAKE_INSTALL_PREFIX=/Home/Venus/Folders/NetBeans_Project/MyProject/lib/trilinos \
+  -DTrilinos_TRIBITS_DIR:STRING=/Home/Venus/Folders/Trilinos-master/TriBITS/tribits \
+  /Home/Venus/Folders/Trilinos-master
   
-  make -j<n> install
+  make install
 
 
 Useful Options
