@@ -43,7 +43,7 @@ Download
 -----------------------------------------------
 1. Download  trilinos from GitHub. Unpack it.
 
-2. Copy the folder TriBITS to the trilinos folder.
+2. Put the folder TriBITS outside the trilinos folder.
 
 3. Create a subfolder where you want to build trilinos. For example, <path to trilinos unpacked folder>/build
 
@@ -127,6 +127,9 @@ Simple non-MPI instructions (enables a few packages, implicit compilers) that I 
 ::
 
   cmake \
+  -DCMAKE_C_COMPILER=/usr/bin/gcc \
+  -DCMAKE_CXX_COMPILER=/usr/bin/g++ \
+  -DCMAKE_Fortran_COMPILER=/usr/bin/gfortran \
   -DTPL_ENABLE_MPI=OFF \
   -DBUILD_SHARED_LIBS=ON \
   -DTrilinos_ENABLE_AztecOO=ON \
@@ -137,9 +140,9 @@ Simple non-MPI instructions (enables a few packages, implicit compilers) that I 
   -Dtrilinos_ENABLE_Teuchos=ON \
   -Dtrilinos_ENABLE_Triutils=ON \
   -DTrilinos_ENABLE_FLOAT=ON \
-  -DTrilinos_ENABLE_COMPLEX=ON \
-  -DCMAKE_INSTALL_PREFIX=/Home/Venus/Folders/NetBeans_Project/MyProject/lib/trilinos \
+  -DCMAKE_INSTALL_PREFIX=/Home/Venus/Folders/NetBeans_Project/MyProject/lib/trilinos-14-3 \
   -DTrilinos_TRIBITS_DIR:STRING=/Home/Venus/Folders/Trilinos-master/TriBITS/tribits \
+  -DTrilinos_TRIBITS_PACKAGE_USE_TRIBITS_DIR=TRUE \
   /Home/Venus/Folders/Trilinos-master
   
   make install
