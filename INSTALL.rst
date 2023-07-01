@@ -26,6 +26,10 @@ Requirements
 * Optionally a Fortran compiler
 * Optionally an installation of MPI
 
+Test system
+============
+* Macbook Air M2, 2022 (aarch64 architecture)
+* Ubuntu Ubuntu 22.04.2 LTS (jammy) based on UTM Virtual Machine
 
 Instructions
 ============
@@ -49,7 +53,7 @@ Download
 
 4. Go to the build folder and execute the command cmake listed below.
 
-Simple non-MPI instructions (enables a few packages, implicit compilers) for arm64 architecture
+non-MPI
 -----------------------------------------------
 
 ::
@@ -75,7 +79,7 @@ Simple non-MPI instructions (enables a few packages, implicit compilers) for arm
   
   make install
 
-Simple MPI instructions (enables a few packages, implicit compilers) for arm64 architecture
+MPI
 -----------------------------------------------
 
 ::
@@ -98,8 +102,8 @@ Simple MPI instructions (enables a few packages, implicit compilers) for arm64 a
   -DTrilinos_TRIBITS_DIR:STRING=/Home/Venus/Folders/Trilinos-source-13.0.0/TriBITS/tribits \
   -DTrilinos_TRIBITS_PACKAGE_USE_TRIBITS_DIR=TRUE \
   /Home/Venus/Folders/Trilinos-source-13.0.0
-
-make install
+  
+  make install
 
 
 Useful Options
