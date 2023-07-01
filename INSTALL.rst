@@ -49,78 +49,6 @@ Download
 
 4. Go to the build folder and execute the command cmake listed below.
 
-Simple MPI instructions (enables most packages)
------------------------------------------------
-
-::
-
-  cmake \
-  -DTPL_ENABLE_MPI=ON \
-  -DMPI_BASE_DIR=<path to mpi install> \
-  -DTrilinos_ENABLE_ALL_PACKAGES=ON \
-  -DCMAKE_INSTALL_PREFIX=<path to install Trilinos into> \
-  <path to Trilinos source>
-  
-  make -j<n> install
-
-NOTE: Enabling all packages will trigger the enable of several third-party
-libraries (TPLs).  If CMake can't find these TPLs on your system, then you
-will need to either point to them or disable them as specified in the CMake
-output.
-
-
-Simple non-MPI instructions (enables most packages)
----------------------------------------------------
-
-::
-
-  cmake \
-  -DCMAKE_C_COMPILER=<path to C compiler> \
-  -DCMAKE_CXX_COMPILER=<path to C++ compiler> \
-  -DCMAKE_Fortran_COMPILER=<path to Fortran compiler> \
-  -DTrilinos_ENABLE_ALL_PACKAGES=ON \
-  -DCMAKE_INSTALL_PREFIX=<path to install Trilinos into> \
-  <path to Trilinos source>
-  
-  make -j<n> install
-
-
-Intermediate MPI instructions (enables a few packages)
-------------------------------------------------------
-
-::
-
-  cmake \
-  -DTPL_ENABLE_MPI=ON \
-  -DMPI_BASE_DIR=<path to mpi install> \
-  -DTrilinos_ENABLE_Epetra=ON \
-  -DTrilinos_ENABLE_AztecOO=ON \
-  -DTrilinos_ENABLE_Ifpack=ON \
-  -DCMAKE_INSTALL_PREFIX=<path to install Trilinos into> \
-  <path to Trilinos source>
-  
-  make -j<n> install
-
-
-Intermediate MPI instructions (enables a few packages, explicit compilers)
--------------------------------------------------------------------------
-
-::
-
-  cmake \
-  -DTPL_ENABLE_MPI=ON \
-  -DCMAKE_C_COMPILER=<path to MPI C compiler wrapper> \
-  -DCMAKE_CXX_COMPILER=<path to MPI C++ compiler wrapper> \
-  -DCMAKE_Fortran_COMPILER=<path to MPI Fortran compiler wrapper> \
-  -DTrilinos_ENABLE_Epetra=ON \
-  -DTrilinos_ENABLE_AztecOO=ON \
-  -DTrilinos_ENABLE_Ifpack=ON \
-  -DCMAKE_INSTALL_PREFIX=<path to install Trilinos into> \
-  <path to Trilinos source>
-  
-  make -j<n> install
-
-
 Simple non-MPI instructions (enables a few packages, implicit compilers) for Apple M2 chip (arm64 architecture)
 -----------------------------------------------
 
@@ -146,6 +74,32 @@ Simple non-MPI instructions (enables a few packages, implicit compilers) for App
   /Home/Venus/Folders/Trilinos-source-13.0.0
   
   make install
+
+Simple MPI instructions (enables a few packages, implicit compilers) for Apple M2 chip (arm64 architecture)
+-----------------------------------------------
+
+::
+
+  cmake \
+  -DCMAKE_C_COMPILER=/usr/bin/mpicc \
+  -DCMAKE_CXX_COMPILER=/usr/bin/mpicxx \
+  -DCMAKE_Fortran_COMPILER=/usr/bin/mpif77 \
+  -DTPL_ENABLE_MPI=ON \
+  -DBUILD_SHARED_LIBS=ON \
+  -DTrilinos_ENABLE_AztecOO=ON \
+  -DTrilinos_ENABLE_Epetra=ON \
+  -DTrilinos_ENABLE_EpetraExt=ON \
+  -Dtrilinos_ENABLE_Gtest=ON \
+  -Dtrilinos_ENABLE_Kokkos=ON \
+  -Dtrilinos_ENABLE_Teuchos=ON \
+  -Dtrilinos_ENABLE_Triutils=ON \
+  -DTrilinos_ENABLE_FLOAT=ON \
+  -DCMAKE_INSTALL_PREFIX=/Home/Venus/Folders/NetBeans_Project/MyProject/lib/trilinos-mpi \
+  -DTrilinos_TRIBITS_DIR:STRING=/Home/Venus/Folders/Trilinos-source-13.0.0/TriBITS/tribits \
+  -DTrilinos_TRIBITS_PACKAGE_USE_TRIBITS_DIR=TRUE \
+  /Home/Venus/Folders/Trilinos-source-13.0.0
+
+make install
 
 
 Useful Options
