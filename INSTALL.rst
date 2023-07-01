@@ -29,7 +29,7 @@ Requirements
 Test system
 ============
 * Macbook Air M2, 2022 (aarch64 architecture)
-* Ubuntu Ubuntu 22.04.2 LTS (jammy) based on UTM Virtual Machine
+* Ubuntu 22.04.2 LTS (jammy) based on UTM Virtual Machine
 
 Instructions
 ============
