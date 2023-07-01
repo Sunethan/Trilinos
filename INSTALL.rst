@@ -49,7 +49,7 @@ Download
 
 4. Go to the build folder and execute the command cmake listed below.
 
-Simple non-MPI instructions (enables a few packages, implicit compilers) for Apple M2 chip (arm64 architecture)
+Simple non-MPI instructions (enables a few packages, implicit compilers) for arm64 architecture
 -----------------------------------------------
 
 ::
@@ -75,7 +75,7 @@ Simple non-MPI instructions (enables a few packages, implicit compilers) for App
   
   make install
 
-Simple MPI instructions (enables a few packages, implicit compilers) for Apple M2 chip (arm64 architecture)
+Simple MPI instructions (enables a few packages, implicit compilers) for arm64 architecture
 -----------------------------------------------
 
 ::
