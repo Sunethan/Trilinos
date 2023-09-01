@@ -67,6 +67,7 @@ non-MPI
   -DTPL_ENABLE_MPI=OFF \
   -DBUILD_SHARED_LIBS=ON \
   -DTrilinos_ENABLE_AztecOO=ON \
+  -DTrilinos_ENABLE_Belos=ON \
   -DTrilinos_ENABLE_Epetra=ON \
   -DTrilinos_ENABLE_EpetraExt=ON \
   -Dtrilinos_ENABLE_Gtest=ON \
@@ -74,6 +75,7 @@ non-MPI
   -Dtrilinos_ENABLE_Teuchos=ON \
   -Dtrilinos_ENABLE_Triutils=ON \
   -DTrilinos_ENABLE_FLOAT=ON \
+  -DTrilinos_ENABLE_TESTS=ON \
   -DCMAKE_INSTALL_PREFIX=/Home/Venus/Folders/NetBeans_Project/MyProject/lib/trilinos \
   -DTrilinos_TRIBITS_DIR:STRING=/Home/Venus/Folders/Trilinos-source-13.0.0/TriBITS/tribits \
   -DTrilinos_TRIBITS_PACKAGE_USE_TRIBITS_DIR=TRUE \
@@ -93,6 +95,7 @@ MPI
   -DTPL_ENABLE_MPI=ON \
   -DBUILD_SHARED_LIBS=ON \
   -DTrilinos_ENABLE_AztecOO=ON \
+  -DTrilinos_ENABLE_Belos=ON \
   -DTrilinos_ENABLE_Epetra=ON \
   -DTrilinos_ENABLE_EpetraExt=ON \
   -Dtrilinos_ENABLE_Gtest=ON \
@@ -100,6 +103,7 @@ MPI
   -Dtrilinos_ENABLE_Teuchos=ON \
   -Dtrilinos_ENABLE_Triutils=ON \
   -DTrilinos_ENABLE_FLOAT=ON \
+  -DTrilinos_ENABLE_TESTS=ON \
   -DCMAKE_INSTALL_PREFIX=/Home/Venus/Folders/NetBeans_Project/MyProject/lib/trilinos-mpi \
   -DTrilinos_TRIBITS_DIR:STRING=/Home/Venus/Folders/Trilinos-source-13.0.0/TriBITS/tribits \
   -DTrilinos_TRIBITS_PACKAGE_USE_TRIBITS_DIR=TRUE \
