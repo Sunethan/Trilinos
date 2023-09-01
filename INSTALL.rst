@@ -51,7 +51,9 @@ Download
 
 3. Create a subfolder where you want to build trilinos. For example, <path to trilinos unpacked folder>/build
 
-4. Go to the build folder and execute the command cmake listed below.
+4. Create the target folder like `.../NetBeans_Project/MyProject/lib/trilinos`. Otherwise, the "make" will not happen.
+
+5. Go to the build folder and execute the command cmake listed below.
 
 non-MPI
 -----------------------------------------------
